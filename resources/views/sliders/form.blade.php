@@ -16,6 +16,7 @@
 
     <div class="mb-3">
       <label for="name" class="form-label">Nama Slider</label>
+      {{-- jika ada error name maka akan ditambahi sebuah html class yang akan membuat input menjadi berwarna merah. old data adalah sebuah penyimpanan sementara, jika ada error fungsi, maka user tidak perlu menulis ulang datanya --}}
       <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror"
              value="{{ old('name', $slider->name ?? '') }}">
       @error('name')
