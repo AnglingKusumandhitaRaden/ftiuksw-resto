@@ -24,7 +24,7 @@ class AuthController extends Controller
         if (Auth::attempt($data)) {
             //akan dibuat session, supaya jika user masuk ke browser lagi, tidak perlu login ulang
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/dashboard');
         }
 
         //memberikan pesan error, jika user tidak ada

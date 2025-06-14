@@ -29,10 +29,10 @@
               <a class="nav-link" href="{{ route("menu.index") }}">Menu</a>
             </li>            
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <form action="{{ route('logout') }}" method="POST" class="d-flex" onsubmit="return confirm('Yakin ingin keluar?')">
+            @csrf
+            <button class="btn btn-sm btn-danger">Logout</button>
+          </form>          
         </div>
       </div>
     </nav>
